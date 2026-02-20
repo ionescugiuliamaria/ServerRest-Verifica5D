@@ -54,7 +54,7 @@ public class GetHandler implements HttpHandler {
             boolean risultato = RouletteService.logicaDellaRoulette(giocata, numero);
 
             // Crea l'oggetto risposta
-            RouletteResponse response = new RouletteResponse();
+            RouletteResponse response = new RouletteResponse(giocata, numero, risultato);
 
             // GSON converte automaticamente l'oggetto Java in JSON
             String jsonRisposta = gson.toJson(response);
@@ -72,11 +72,11 @@ public class GetHandler implements HttpHandler {
 
     // Validazione dei parametri (da implementare)
     private boolean validazioneParametri(Map<String, String> parametri) {
-        if (!parametri.containsKey("giocata")
-                || !parametri.containsKey("numero")) {
-            return false;
-        }else{
+        if (!parametri.containsKey("giocata")|| 
+            !parametri.containsKey("numero")) {
             return true;
+        }else{
+            return false;
         }
     }
 

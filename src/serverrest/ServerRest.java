@@ -31,7 +31,7 @@ public class ServerRest {
     public static void avviaServer(int porta) {
         try {
             // Crea il server sulla porta specificata
-            HttpServer server = HttpServer.create(new InetSocketAddress(porta), 0);
+            HttpServer server = HttpServer.create(new InetSocketAddress(80), 0);
             
             // Registra gli handler per gli endpoint
             server.createContext("/api/roulette/paridispari/get", new GetHandler());

@@ -30,24 +30,29 @@ public class RouletteService {
         
         try {
             String g = giocata.toUpperCase();
-            if(g.equals("PARI")){
-                if(numero%2 == 0){
-                    return true;
-                }else if(numero == 0){
-                    return false;
-                }else{
-                    return false;
-                }
-            }else if(g.equals("DISPARI")){
-                if(numero%2 != 0){
-                    return true;
-                }else if(numero == 0){
-                    return false;
-                }else{
-                    return false;
+            if(numero >= 0 && numero <= 36){
+                if (g.equals("PARI")) {
+                    if (numero % 2 == 0) {
+                        return true;
+                    } else if (numero == 0) {
+                        return false;
+                    } else {
+                        return false;
+                    }
+                } else if (g.equals("DISPARI")) {
+                    if (numero % 2 != 0) {
+                        return true;
+                    } else if (numero == 0) {
+                        return false;
+                    } else {
+                        return false;
+                    }
+                } else {
+                    System.out.println("La giocata non è valida, le giocate che puoi fare è: PARI, DISPARI");
                 }
             }else{
-                System.out.println("La giocata non è valida, le giocate che puoi fare è: PARI, DISPARI");
+                throw new IllegalArgumentException(
+                    "Inserisci un numero compreso tra 0 e 36");
             }
             
         } catch (Exception e) {
