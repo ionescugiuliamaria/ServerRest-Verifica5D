@@ -26,7 +26,7 @@ import java.util.Map;
  */
 
 
-public class DaFarePostHandler implements HttpHandler {
+public class PostHandler implements HttpHandler {
     
     // Istanza Gson configurata per pretty printing
     private final Gson gson = new GsonBuilder()
@@ -63,8 +63,11 @@ public class DaFarePostHandler implements HttpHandler {
                 return;
             }
             
-            // Chiama la logica di calcolo DA FARE
-            
+            // Chiama la logica della roulette
+            boolean risultato = RouletteService.logicaDellaRoulette(
+                    request.getGiocata(),
+                    request.getNumero()
+            );
             
             // Crea l'oggetto risposta DA FARE
            RouletteResponse response = new RouletteResponse(
