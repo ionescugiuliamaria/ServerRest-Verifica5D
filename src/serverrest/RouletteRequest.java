@@ -11,15 +11,17 @@ package serverrest;
 public class RouletteRequest {
     String giocata;
     Integer numero;
+    boolean vinto;
     
     // Costruttore vuoto necessario per GSON
     public RouletteRequest() {
     }
     
     // Costruttore con parametri  
-   public RouletteRequest(String giocata, Integer numero) {
+   public RouletteRequest(String giocata, Integer numero, boolean vinto) {
         this.giocata = giocata;
         this.numero = numero;
+        this.vinto = vinto;
     }
     
     // Getter
@@ -31,6 +33,11 @@ public class RouletteRequest {
     public Integer getNumero() {
         return numero;
     }
+
+    public boolean isVinto() {
+        return vinto;
+    }
+    
     // Setter
      public void setGiocata(String giocata) {
         this.giocata = giocata;
@@ -40,10 +47,14 @@ public class RouletteRequest {
         this.numero = numero;
     }
 
+    public void setVinto(boolean vinto) {
+        this.vinto = vinto;
+    }
+
     // ToString
 
     @Override
     public String toString() {
-        return "DaFareRequest{" + "giocata=" + giocata + ", numero=" + numero + '}';
+        return "RouletteRequest{" + "giocata=" + giocata + ", numero=" + numero + ", vinto=" + vinto + '}';
     }
 }

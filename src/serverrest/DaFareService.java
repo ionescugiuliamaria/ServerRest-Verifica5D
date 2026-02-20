@@ -19,7 +19,7 @@ public class DaFareService {
      * @return 
      * @throws IllegalArgumentException se ...
      */
-    public static double logicaDiCalcolo() 
+    public static double logicaDiCalcolo(String giocata, Integer numero) 
             throws IllegalArgumentException {
         
         // Controllo se i parametri passati sono validi
@@ -28,6 +28,7 @@ public class DaFareService {
         }
         
         try {
+            
             
         } catch (Exception e) {
             throw new IllegalArgumentException(

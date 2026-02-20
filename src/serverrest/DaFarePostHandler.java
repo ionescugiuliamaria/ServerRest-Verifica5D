@@ -64,7 +64,7 @@ public class DaFarePostHandler implements HttpHandler {
             }
             
             // Chiama la logica di calcolo DA FARE
-           
+            
             
             // Crea l'oggetto risposta DA FARE
            RouletteResponse response = new RouletteResponse(
