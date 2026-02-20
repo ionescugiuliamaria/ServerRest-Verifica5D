@@ -51,5 +51,4 @@ public class RouletteResponse {
     public void setVinto(boolean vinto) {
         this.vinto = vinto;
     }
-    
 }

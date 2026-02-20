@@ -71,6 +71,9 @@ public class PostHandler implements HttpHandler {
             
             // Crea l'oggetto risposta DA FARE
            RouletteResponse response = new RouletteResponse(
+                   request.getGiocata(),
+                   request.getNumero(),
+                   risultato
             );
             
             // GSON converte automaticamente l'oggetto Java in JSON
@@ -89,7 +92,6 @@ public class PostHandler implements HttpHandler {
     
     // Validazione dei parametri (da implementare)
     private boolean validazioneParametri(RouletteRequest request) {
-        
         return false;
     }
 

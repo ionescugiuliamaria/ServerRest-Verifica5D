@@ -47,14 +47,14 @@ public class RouletteService {
                     return false;
                 }
             }else{
-                JOptionPane.showInputDialog("La giocata non è valida, le giocate che puoi fare è: PARI, DISPARI");
+                System.out.println("La giocata non è valida, le giocate che puoi fare è: PARI, DISPARI");
             }
             
         } catch (Exception e) {
             throw new IllegalArgumentException(
-                    "Opzione non valida. Opzione deve essere DA FARE");
+                    "Opzione non valida. Opzione deve essere PARI o DISPARI");
         }
-        return true; // Placeholder, da sostituire con il risultato della logica di calcolo
+        return true; // Placeholder
     }
 
     // Metodo di validazione dei parametri (da implementare)
