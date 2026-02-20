@@ -67,7 +67,7 @@ public class DaFarePostHandler implements HttpHandler {
            
             
             // Crea l'oggetto risposta DA FARE
-           DaFareResponse response = new DaFareResponse(
+           RouletteResponse response = new RouletteResponse(
             );
             
             // GSON converte automaticamente l'oggetto Java in JSON
