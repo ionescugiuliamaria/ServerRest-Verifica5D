@@ -55,8 +55,8 @@ public class DaFareGetHandler implements HttpHandler {
             String giocata = parametri.get(this);
             Integer numero = Integer.parseInt(parametri.get(this));
             
-            // Esegue la logica di calcolo
-            double risultato = DaFareService.logicaDiCalcolo(giocata, numero);
+            // Esegue la logica della roulette
+            boolean risultato = RouletteService.logicaDellaRoulette(giocata, numero);
             
             // Crea l'oggetto risposta
             RouletteResponse response = new RouletteResponse(
