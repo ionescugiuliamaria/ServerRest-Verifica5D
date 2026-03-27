@@ -30,7 +30,6 @@ public class ServerRest {
      */
     public static void avviaServer(int porta) {
         try {
-            porta = 80;
             // Crea il server sulla porta specificata
             HttpServer server = HttpServer.create(new InetSocketAddress(porta), 0);
             
