@@ -27,7 +27,6 @@ public class RouletteService {
             throw new IllegalArgumentException("Giocata e numero non possono essere vuoti");
         }
 
-        try {
             String g = giocata.toUpperCase();
             if (numero >= 0 && numero <= 36) {
                 if (numero == 0) {
@@ -46,19 +45,14 @@ public class RouletteService {
                             return false;
                         }
                     } else {
-                        System.out.println("La giocata non è valida, le giocate che puoi fare è: PARI, DISPARI");
+                        throw new IllegalArgumentException(
+                        "La giocata non è valida, le giocate che puoi fare è: PARI, DISPARI");
                     }
                 }
             } else {
                 throw new IllegalArgumentException(
                         "Inserisci un numero compreso tra 0 e 36");
             }
-
-        } catch (Exception e) {
-            throw new IllegalArgumentException(
-                    "Opzione non valida. Opzione deve essere PARI o DISPARI");
-        }
-        return false; // Placeholder
     }
 
     // Metodo di validazione dei parametri (da implementare)
